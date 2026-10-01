@@ -11,6 +11,11 @@ Welcome to the IT Hub documentation hub. Use the links below to access the avail
 - [API Reference](./api-reference.md)
 - [Troubleshooting](./troubleshooting.md)
 
+
+## Windows
+- [Remote access with Powershell](./windows_remote_access_powershell.md)
+- [WSL](./windows_wsl.md)
+
 ## Overview
 
 This documentation index provides quick access to the main markdown documents in the project. Choose a section to learn more about setup, usage, and support.
