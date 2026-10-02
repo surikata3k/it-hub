@@ -1,16 +1,14 @@
 # Links
 
 ## Apps
-(https://windirstat.net/) - Windirstat: Windows Directory Statistics  
-(https://filebrowserquantum.com/en/) FileBrowser Quantum
+- [WinDirStat](https://windirstat.net/) - Windows Directory Statistics
+- [FileBrowser Quantum](https://filebrowserquantum.com/en/)
 
 ## Cheat Sheets
-(https://www.markdownguide.org/cheat-sheet/) - MarkDown cheat sheet
+- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
 
 ## Links
-
-[https://iesgn.github.io/curso_docker_2021/](https://iesgn.github.io/curso_docker_2021/) - Curso docker IES Gonzalo Nazareno  
-[https://mailtrap.io/](https://mailtrap.io/) Sendmail for testing  
-[https://excalidraw.com/](https://excalidraw.com/) 
-[https://docsify.js.org/](Docsify)  
-  
+- [Curso Docker IES Gonzalo Nazareno](https://iesgn.github.io/curso_docker_2021/)
+- [Mailtrap](https://mailtrap.io/) - Sendmail for testing
+- [Excalidraw](https://excalidraw.com/)
+- [Docsify](https://docsify.js.org/)
