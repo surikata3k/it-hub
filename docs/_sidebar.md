@@ -1,31 +1,29 @@
 <!-- docs/_sidebar.md -->
 
 
-* [Enlaces de interés](links.md)
+* [Links of Interest](links.md)
 
 * **Linux**
-  * [Comandos básicos](linux_commands.md)
-  * [Editor Nano (Básico)](linux_nano_basic.md)
-  * [Editor Nano](linux_nano.md)
-  * [Configuración Netplan](linux_netplan.md)
-  * [Configuración DNS](linux_dns.md)
-  * [Terminal Tmux](linux_tmux.md)
+  * [Basic Commands](linux_commands.md)
+  * [Nano Editor (Basic)](linux_nano_basic.md)
+  * [Nano Editor](linux_nano.md)
+  * [Netplan Configuration](linux_netplan.md)
+  * [DNS Configuration](linux_dns.md)
+  * [Tmux Terminal](linux_tmux.md)
 
 * **Docker**
-  * [Comandos de Docker](docker_commands.md)
-  * [Creación de imágenes](docker_create_image.md)
-  * [Ejemplo de `docker run`](docker_run_example.md)
+  * [Docker Commands](docker_commands.md)
+  * [Creating Images](docker_create_image.md)
+  * [`docker run` Example](docker_run_example.md)
 
 * **Windows**
-  * [Visión general](windows.md)
-  * [Acceso remoto con PowerShell](windows_remote_access_powershell.md)
-  * [Servidor y cliente SSH](windows_ssh.md)
+  * [Overview](windows.md)
+  * [Remote Access with PowerShell](windows_remote_access_powershell.md)
+  * [SSH Server and Client](windows_ssh.md)
   * [WSL (Windows Subsystem for Linux)](windows_wsl.md)
 
-* **Bases de Datos**
+* **Databases**
   * [Oracle Tips](oracle_tips.md)
 
-* **Desarrollo y Herramientas**
-  * [Atajos de VS Code](vscode_shortcuts.md)
-  * [Vue.js](vue.md)
-
+* **Development and Tools**
+  * [VS Code Shortcuts](vscode_shortcuts.md)

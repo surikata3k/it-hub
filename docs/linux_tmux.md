@@ -1,22 +1,22 @@
 # TMUX
 [https://tmuxcheatsheet.com/](https://tmuxcheatsheet.com/)
 
-## Per accedir a l'última consola
+## To access the latest console
 ```
 tmux attach
 ```
 
-## Per accedir a la consola 0
+## To access console 0
 ```
 tmux attach -t 0
 ```
 
-## Per llistar les consoles
+## To list consoles
 ```
 tmux ls
 ```
 
-## Per afegir una consola
+## To add a console
 ```
 tmux new
 ```
@@ -25,4 +25,3 @@ tmux new
 ```
 ctrl+b d
 ```
-

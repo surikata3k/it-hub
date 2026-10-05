@@ -1,14 +1,14 @@
-# Accés remot a Windows Server 2025
+# Remote Access to Windows Server 2025
 
-## Connexió remota amb PowerShell
+## Remote Connection with PowerShell
 
-Per connectar-te de manera remota mitjançant **PowerShell** a un servidor Windows Server 2025, el mètode estàndard és **WinRM** (*Windows Remote Management*) utilitzant el cmdlet `Enter-PSSession`.
+To connect remotely using **PowerShell** to a Windows Server 2025 server, the standard method is **WinRM** (*Windows Remote Management*) using the `Enter-PSSession` cmdlet.
 
 ---
 
-### 1. Preparació al servidor (Windows Server 2025)
+### 1. Preparation on the Server (Windows Server 2025)
 
-A Windows Server 2025 la gestió remota acostuma a estar activada per defecte. Per verificar-ho o habilitar-ho manualment, executa la següent ordre en una consola de PowerShell amb permisos d'**Administrador** dins del servidor:
+In Windows Server 2025, remote management is usually enabled by default. To verify or enable it manually, run the following command in a PowerShell console with **Administrator** permissions on the server:
 
 ```powershell
 Enable-PSRemoting -Force
@@ -16,28 +16,28 @@ Enable-PSRemoting -Force
 
 ---
 
-### 2. Connexió des de l'equip client
+### 2. Connection from the Client Computer
 
-#### Cas A: Si el servidor i el client estan al mateix domini (Active Directory)
+#### Case A: If the server and client are in the same domain (Active Directory)
 
-Obre PowerShell al teu equip client i executa:
+Open PowerShell on your client computer and run:
 
 ```powershell
 Enter-PSSession -ComputerName "NomDelServidor" -Credential (Get-Credential)
 ```
 
-> **Nota:** Introdueix les credencials de l'usuari amb permisos d'administrador al servidor quan se't sol·licitin.
+> **Note:** Enter the credentials of a user with administrator permissions on the server when prompted.
 
-#### Cas B: Si no hi ha domini (Grup de treball / Workgroup)
+#### Case B: If there is no domain (Workgroup)
 
-Quan no s'utilitza Active Directory, cal afegir l'adreça del servidor a la llista de Hosts de Confiança (*TrustedHosts*) del teu equip client.
+When Active Directory is not used, you must add the server address to the Trusted Hosts (*TrustedHosts*) list on your client computer.
 
-1. Al teu equip client, obre PowerShell com a **Administrador** i executa:
+1. On your client computer, open PowerShell as **Administrator** and run:
    ```powershell
    Set-Item WSMan:\localhost\Client\TrustedHosts -Value "IP_DEL_SERVIDOR" -Concatenate -Force
    ```
-2. *(Opcional)* Pots substituir `"IP_DEL_SERVIDOR"` per `"*"` per confiar en qualsevol equip de la xarxa local.
-3. Connecta't indicant la IP del servidor:
+2. *(Optional)* You can replace `"IP_DEL_SERVIDOR"` with `"*"` to trust any computer on the local network.
+3. Connect by specifying the server IP:
    ```powershell
    Enter-PSSession -ComputerName "IP_DEL_SERVIDOR" -Credential "IP_DEL_SERVIDOR\Administrador"
    ```
