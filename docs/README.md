@@ -1,3 +1,3 @@
 # IT-Hub
 
-Aquest és un lloc on guardo retalls, tutorials, pràctiques i recursos IT.
+This is a place where I keep IT snippets, tutorials, practice exercises, and resources.
