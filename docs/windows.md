@@ -16,3 +16,17 @@ Pres Shit + F10
 Type: start ms-cxh:localonly
 OR
 Type: OOBE\BYPASSNRO
+
+### Mouse disable wake up from sleep
+1. Find the exact name of your mouse by running this command:
+
+```dos
+powercfg -devicequery wake_armed
+```
+
+2. Disable the wake capability by running the following command (replace `DeviceName` with the name you copied):
+
+```dos
+powercfg -devicedisablewake "DeviceName"
+```
+* **Example:** `powercfg -devicedisablewake "HID-compliant mouse"`
