@@ -2,7 +2,7 @@
 
 A place where I keep IT snippets, tutorials, practice exercises and resources.
 
-Site: <https://surikata3k.github.io/it-hub/> (built with [Zensical](https://zensical.org)).
+Site: <https://surikata3k.github.io/it-hub> (built with [Zensical](https://zensical.org)).
 
 ## Edit locally
 
