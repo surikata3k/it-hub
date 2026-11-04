@@ -1,7 +1,7 @@
-# PostgreSQL 18 with persistent data and configuration.
-# Where each thing is stored is chosen in the .env file:
-#   PG_DATA / PG_CONF = name    -> Docker volume
-#   PG_DATA / PG_CONF = ./path  -> host folder (next to this file)
+# PostgreSQL 18 con datos y configuración persistentes.
+# Dónde se guarda cada cosa se elige en el fichero .env:
+#   PG_DATA / PG_CONF = nombre  -> volumen de Docker
+#   PG_DATA / PG_CONF = ./ruta  -> carpeta de Windows (junto a este fichero)
 
 name: postgres
 
@@ -12,19 +12,19 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is missing in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Falta POSTGRES_PASSWORD en .env}
       POSTGRES_DB: ${POSTGRES_DB:-postgres}
     ports:
       - "${PG_PORT:-5432}:5432"
     volumes:
-      # Data (PostgreSQL 18+ mounts /var/lib/postgresql, not .../data)
+      # Datos (en PostgreSQL 18+ se monta /var/lib/postgresql, no .../data)
       - ${PG_DATA:-pgdata}:/var/lib/postgresql
-      # Configuration: postgresql.conf and pg_hba.conf
+      # Configuración: postgresql.conf y pg_hba.conf
       - ${PG_CONF:-pgconf}:/etc/postgresql/custom
 
-    # Before starting PostgreSQL, if the configuration folder/volume is empty,
-    # default postgresql.conf and pg_hba.conf files are created.
-    # If they already exist they are NOT touched: your edited files are used.
+    # Antes de arrancar PostgreSQL, si la carpeta/volumen de configuración
+    # está vacía, se crean postgresql.conf y pg_hba.conf por defecto.
+    # Si ya existen, NO se tocan: se usan tal cual los hayas editado.
     entrypoint:
       - bash
       - -c
@@ -36,7 +36,7 @@ services:
         if [ ! -f "$$CONF/postgresql.conf" ]; then
           cp /usr/share/postgresql/postgresql.conf.sample "$$CONF/postgresql.conf"
           sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" "$$CONF/postgresql.conf"
-          echo ">> Created $$CONF/postgresql.conf"
+          echo ">> Creado $$CONF/postgresql.conf"
         fi
 
         if [ ! -f "$$CONF/pg_hba.conf" ]; then
@@ -50,7 +50,7 @@ services:
         local   replication     all                                     trust
         host    replication     all             0.0.0.0/0               scram-sha-256
         EOF
-          echo ">> Created $$CONF/pg_hba.conf"
+          echo ">> Creado $$CONF/pg_hba.conf"
         fi
 
         exec docker-entrypoint.sh "$$@"
@@ -68,8 +68,8 @@ services:
       timeout: 5s
       retries: 5
 
-# Volumes with a fixed name: they don't depend on the project folder name.
-# If you use host folders they are still declared but stay unused.
+# Volúmenes con nombre fijo: no dependen del nombre de la carpeta del proyecto.
+# Si usas carpetas de Windows, se declaran igualmente pero quedan sin usar.
 volumes:
   pgdata:
     name: pgdata

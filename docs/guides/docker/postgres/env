@@ -1,0 +1,21 @@
+# ---- Credenciales ----
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=123456
+POSTGRES_DB=postgres
+
+# ---- Contenedor ----
+PG_VERSION=18
+PG_CONTAINER=pg18
+PG_PORT=5432
+
+# ---- Dónde se guardan los datos ----
+# Volumen de Docker (recomendado en Windows):
+PG_DATA=pgdata
+# Carpeta de Windows (ver aviso en las instrucciones):
+#PG_DATA=./data
+
+# ---- Dónde se guarda la configuración ----
+# Carpeta de Windows (editable con VS Code / Bloc de notas):
+PG_CONF=./conf
+# Volumen de Docker:
+#PG_CONF=pgconf
