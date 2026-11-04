@@ -1,0 +1,77 @@
+# PostgreSQL 18 with persistent data and configuration.
+# Where each thing is stored is chosen in the .env file:
+#   PG_DATA / PG_CONF = name    -> Docker volume
+#   PG_DATA / PG_CONF = ./path  -> host folder (next to this file)
+
+name: postgres
+
+services:
+  postgres:
+    image: postgres:${PG_VERSION:-18}
+    container_name: ${PG_CONTAINER:-pg18}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is missing in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-postgres}
+    ports:
+      - "${PG_PORT:-5432}:5432"
+    volumes:
+      # Data (PostgreSQL 18+ mounts /var/lib/postgresql, not .../data)
+      - ${PG_DATA:-pgdata}:/var/lib/postgresql
+      # Configuration: postgresql.conf and pg_hba.conf
+      - ${PG_CONF:-pgconf}:/etc/postgresql/custom
+
+    # Before starting PostgreSQL, if the configuration folder/volume is empty,
+    # default postgresql.conf and pg_hba.conf files are created.
+    # If they already exist they are NOT touched: your edited files are used.
+    entrypoint:
+      - bash
+      - -c
+      - |
+        set -e
+        CONF=/etc/postgresql/custom
+        mkdir -p "$$CONF"
+
+        if [ ! -f "$$CONF/postgresql.conf" ]; then
+          cp /usr/share/postgresql/postgresql.conf.sample "$$CONF/postgresql.conf"
+          sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" "$$CONF/postgresql.conf"
+          echo ">> Created $$CONF/postgresql.conf"
+        fi
+
+        if [ ! -f "$$CONF/pg_hba.conf" ]; then
+          cat > "$$CONF/pg_hba.conf" <<'EOF'
+        # TYPE  DATABASE        USER            ADDRESS                 METHOD
+        local   all             all                                     trust
+        host    all             all             127.0.0.1/32            scram-sha-256
+        host    all             all             ::1/128                 scram-sha-256
+        host    all             all             0.0.0.0/0               scram-sha-256
+        host    all             all             ::/0                    scram-sha-256
+        local   replication     all                                     trust
+        host    replication     all             0.0.0.0/0               scram-sha-256
+        EOF
+          echo ">> Created $$CONF/pg_hba.conf"
+        fi
+
+        exec docker-entrypoint.sh "$$@"
+      - bash
+    command:
+      - postgres
+      - -c
+      - config_file=/etc/postgresql/custom/postgresql.conf
+      - -c
+      - hba_file=/etc/postgresql/custom/pg_hba.conf
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+# Volumes with a fixed name: they don't depend on the project folder name.
+# If you use host folders they are still declared but stay unused.
+volumes:
+  pgdata:
+    name: pgdata
+  pgconf:
+    name: pgconf
