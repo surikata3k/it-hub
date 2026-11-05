@@ -1,13 +1,13 @@
 [project]
-site_url = "https://surikata3k.github.io/it-hub/"
-site_name = "IT-Hub"
+site_url = "https://docs.surikata3k.github.io/"
+site_name = "Surikata3k Docs"
 site_description = "IT notes, snippets, cheat sheets and tutorials: Linux, Windows, Docker, databases and more."
 site_author = "Surikata3k"
 
 copyright = "Copyright &copy; 2026 Surikata3k"
 
-repo_url = "https://github.com/surikata3k/it-hub"
-repo_name = "surikata3k/it-hub"
+repo_url = "https://github.com/surikata3k/docs"
+repo_name = "surikata3k/docs"
 edit_uri = "edit/main/docs/"
 
 # nav = [
@@ -80,7 +80,7 @@ toggle.name = "Switch to system preference"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/surikata3k/it-hub"
+link = "https://github.com/surikata3k/docs"
 
 # [[project.extra.social]]
 # icon = "fontawesome/brands/mastodon"
