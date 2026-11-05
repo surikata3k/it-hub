@@ -1,6 +1,6 @@
 [project]
 site_url = "https://docs.surikata3k.com/"
-site_name = "Surikata3k Docs"
+site_name = "docs.surikata3k.com"
 site_description = "IT notes, snippets, cheat sheets and tutorials: Linux, Windows, Docker, databases and more."
 site_author = "Surikata3k"
 
