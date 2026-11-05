@@ -1,3 +1,7 @@
+---
+description: "Step-by-step guide to install Moodle locally on Ubuntu 26.04 with Apache, MySQL and PHP 8.5."
+---
+
 # Moodle installation (local)
 
 Install Moodle on Ubuntu 26.04 with Apache, MySQL and PHP 8.5, reachable at `http://moodle.local`.

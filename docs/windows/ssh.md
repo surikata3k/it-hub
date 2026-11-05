@@ -1,3 +1,7 @@
+---
+description: "Use SSH on Windows 10 and 11: create keys, copy them to Linux servers, the config file, scp and the OpenSSH server."
+---
+
 # SSH on Windows
 
 Windows 10 and 11 include the OpenSSH client, so `ssh`, `scp` and `ssh-keygen` work in PowerShell.

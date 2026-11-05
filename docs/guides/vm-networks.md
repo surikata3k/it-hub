@@ -1,4 +1,8 @@
-# VMWare Workstation and VirtualBox Netwoks
+---
+description: "VMware Workstation and VirtualBox network modes compared: bridged, NAT, host-only and internal, with gateways, DNS and DHCP."
+---
+
+# VMware Workstation and VirtualBox networks
 
 ## VMware Workstation
 

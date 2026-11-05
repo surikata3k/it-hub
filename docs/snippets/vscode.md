@@ -1,3 +1,7 @@
+---
+description: "Visual Studio Code keyboard shortcuts cheat sheet."
+---
+
 # VS Code
 
 | Action | Keys |

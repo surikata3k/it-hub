@@ -1,3 +1,7 @@
+---
+description: "Set up an OpenSSH server on Ubuntu and connect from Windows 11, including key-based login."
+---
+
 # SSH from Windows 11 to Ubuntu
 
 How to set up an SSH server on Ubuntu and connect to it from Windows 11, including key-based login.

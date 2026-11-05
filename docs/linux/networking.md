@@ -1,3 +1,7 @@
+---
+description: "Linux networking snippets: static IP with Netplan and DNS configuration."
+---
+
 # Networking
 
 ## Static IP with Netplan

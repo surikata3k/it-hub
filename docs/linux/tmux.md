@@ -1,3 +1,7 @@
+---
+description: "Tmux cheat sheet: sessions, windows, panes and the most used commands."
+---
+
 # Tmux
 
 | Action | Command |

@@ -1,3 +1,7 @@
+---
+description: "WSL cheat sheet: manage, export, import and remove distros and users in the Windows Subsystem for Linux."
+---
+
 # WSL
 
 ## Manage distros

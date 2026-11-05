@@ -1,8 +1,12 @@
+---
+description: "Oracle Database snippets: connect with SQL*Plus, create users and change passwords."
+---
+
 # Oracle
 
 ## Connect with SQL\*Plus
 
-Inside the [Oracle Free container](docker/db_containers.md):
+Inside the [Oracle Free container](https://github.com/surikata3k/docker):
 
 ```bash
 docker exec -it oracle sqlplus / as sysdba

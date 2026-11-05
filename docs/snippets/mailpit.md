@@ -1,3 +1,7 @@
+---
+description: "Run Mailpit, a fake SMTP server for testing, with Docker, send test emails from PowerShell and connect Moodle to it."
+---
+
 # Mailpit
 
 [Mailpit](https://mailpit.axllent.org/) is a fake SMTP server for testing: it catches every email your apps send and shows them in a web interface. Nothing reaches real inboxes.

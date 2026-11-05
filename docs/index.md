@@ -1,4 +1,5 @@
 ---
+description: "IT notes, cheat sheets and short tutorials on Linux, Windows, networking, SSH, virtual machines and databases, ready to copy and use."
 hide:
   - navigation
   - toc

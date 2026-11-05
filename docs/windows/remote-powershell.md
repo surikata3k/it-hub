@@ -1,3 +1,7 @@
+---
+description: "Connect remotely to Windows Server 2025 with PowerShell and WinRM using Enter-PSSession."
+---
+
 # Remote PowerShell
 
 To connect remotely with **PowerShell** to a Windows Server 2025, the standard method is **WinRM** (*Windows Remote Management*) with the `Enter-PSSession` cmdlet.

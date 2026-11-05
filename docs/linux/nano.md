@@ -1,3 +1,7 @@
+---
+description: "Nano editor cheat sheet: the essential keyboard shortcuts and a full reference."
+---
+
 # Nano
 
 Quick reference for the `nano` editor.

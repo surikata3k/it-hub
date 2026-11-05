@@ -1,3 +1,7 @@
+---
+description: "How asymmetric (public-key) encryption works: key pairs, confidentiality, digital signatures, RSA and ECC, hybrid encryption and PKI."
+---
+
 # Asymmetric encryption: how it works
 
 ## Introduction and objectives
@@ -175,3 +179,9 @@ If an attacker manages to make us believe that their public key is the bank's, t
 4. From the agreed key, both derive symmetric keys, and the data travels encrypted with AES-GCM or ChaCha20-Poly1305.
 
 Asymmetric to authenticate and agree on keys, symmetric for the data: hybrid encryption in action.
+
+## Try it yourself
+
+!!! tip "Interactive simulators (in Spanish)"
+    - [Asymmetric key simulator](https://surikata3k.com/apps/clave-asimetrica/): padlocks, keys and seals to practise encrypting, signing and spotting a man-in-the-middle attack.
+    - [The maths behind RSA](https://surikata3k.com/apps/clave-asimetrica/matematicas.html): generate a key pair with small numbers, encrypt, sign and try to break it.

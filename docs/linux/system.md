@@ -1,3 +1,7 @@
+---
+description: "Linux system administration snippets: systemd services, iptables rules, GRUB, lid-close behaviour and more."
+---
+
 # System
 
 ## Services

@@ -1,3 +1,7 @@
+---
+description: "Windows tips: disk benchmark, classic right-click menu in Windows 11, install without a Microsoft account and more."
+---
+
 # Windows tips
 
 ## Benchmark a disk

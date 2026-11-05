@@ -1,6 +1,6 @@
 [project]
 site_url = "https://docs.surikata3k.com/"
-site_name = "docs.surikata3k.com"
+site_name = "Surikata3K Docs"
 site_description = "IT notes, snippets, cheat sheets and tutorials: Linux, Windows, Docker, databases and more."
 site_author = "Surikata3k"
 
@@ -77,6 +77,16 @@ media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/globe"
+link = "https://surikata3k.com/"
+name = "surikata3k.com"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/youtube"
+link = "https://www.youtube.com/@Surikata3K"
+name = "YouTube"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
