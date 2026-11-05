@@ -1,8 +1,8 @@
-# IT-Hub
+# Surikata3k Docs
 
 A place where I keep IT snippets, tutorials, practice exercises and resources.
 
-Site: <https://surikata3k.com/it-hub> (built with [Zensical](https://zensical.org)).
+Site: <https://docs.surikata3k.com/> (built with [Zensical](https://zensical.org)).
 
 ## Edit locally
 
